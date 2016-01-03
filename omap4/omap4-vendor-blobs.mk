@@ -1,26 +1,22 @@
-VENDOR_FOLDER := vendor/ti/omap4
-
-ifeq ($(TARGET_BOARD_OMAP_CPU),4470)
-	VENDOR_SGX_CORE := SGX544_112
-else
-	VENDOR_SGX_CORE := SGX540_120
-endif
+VENDOR_FOLDER := vendor/ti/proprietary/omap4
 
 PRODUCT_COPY_FILES += \
-	$(VENDOR_FOLDER)/proprietary/etc/powervr.ini:system/etc/powervr.ini \
-	$(VENDOR_FOLDER)/proprietary/vendor/lib/egl/libEGL_POWERVR_$(VENDOR_SGX_CORE).so:system/vendor/lib/egl/libEGL_POWERVR_$(VENDOR_SGX_CORE).so \
-	$(VENDOR_FOLDER)/proprietary/vendor/lib/egl/libGLESv1_CM_POWERVR_$(VENDOR_SGX_CORE).so:system/vendor/lib/egl/libGLESv1_CM_POWERVR_$(VENDOR_SGX_CORE).so \
-	$(VENDOR_FOLDER)/proprietary/vendor/lib/egl/libGLESv2_POWERVR_$(VENDOR_SGX_CORE).so:system/vendor/lib/egl/libGLESv2_POWERVR_$(VENDOR_SGX_CORE).so \
-	$(VENDOR_FOLDER)/proprietary/vendor/lib/hw/gralloc.omap$(TARGET_BOARD_OMAP_CPU).so:system/vendor/lib/hw/gralloc.omap$(TARGET_BOARD_OMAP_CPU).so \
-	$(VENDOR_FOLDER)/proprietary/vendor/lib/libglslcompiler_$(VENDOR_SGX_CORE).so:system/vendor/lib/libglslcompiler_$(VENDOR_SGX_CORE).so \
-	$(VENDOR_FOLDER)/proprietary/vendor/lib/libIMGegl_$(VENDOR_SGX_CORE).so:system/vendor/lib/libIMGegl_$(VENDOR_SGX_CORE).so \
-	$(VENDOR_FOLDER)/proprietary/vendor/lib/libpvr2d_$(VENDOR_SGX_CORE).so:system/vendor/lib/libpvr2d_$(VENDOR_SGX_CORE).so \
-	$(VENDOR_FOLDER)/proprietary/vendor/lib/libpvrANDROID_WSEGL_$(VENDOR_SGX_CORE).so:system/vendor/lib/libpvrANDROID_WSEGL_$(VENDOR_SGX_CORE).so \
-	$(VENDOR_FOLDER)/proprietary/vendor/lib/libPVRScopeServices_$(VENDOR_SGX_CORE).so:system/vendor/lib/libPVRScopeServices_$(VENDOR_SGX_CORE).so \
-	$(VENDOR_FOLDER)/proprietary/vendor/lib/libsrv_init_$(VENDOR_SGX_CORE).so:system/vendor/lib/libsrv_init_$(VENDOR_SGX_CORE).so \
-	$(VENDOR_FOLDER)/proprietary/vendor/lib/libsrv_um_$(VENDOR_SGX_CORE).so:system/vendor/lib/libsrv_um_$(VENDOR_SGX_CORE).so \
-	$(VENDOR_FOLDER)/proprietary/vendor/lib/libusc_$(VENDOR_SGX_CORE).so:system/vendor/lib/libusc_$(VENDOR_SGX_CORE).so
+    $(VENDOR_FOLDER)/proprietary/vendor/firmware/ducati-m3.bin:system/vendor/firmware/ducati-m3.bin \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/egl/libEGL_POWERVR_SGX540_120.so:system/vendor/lib/egl/libEGL_POWERVR_SGX540_120.so \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so:system/vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so:system/vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/libfrsdk.so:system/vendor/lib/libfrsdk.so \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/hw/hwcomposer.omap4.so:system/vendor/lib/hw/hwcomposer.omap4.so \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/hw/gralloc.omap4.so:system/vendor/lib/hw/gralloc.omap4.so \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/libglslcompiler.so:system/vendor/lib/libglslcompiler.so \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/libIMGegl.so:system/vendor/lib/libIMGegl.so \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/libpvr2d.so:system/vendor/lib/libpvr2d.so \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/libpvrANDROID_WSEGL.so:system/vendor/lib/libpvrANDROID_WSEGL.so \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/libPVRScopeServices.so:system/vendor/lib/libPVRScopeServices.so \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/libsrv_init.so:system/vendor/lib/libsrv_init.so \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/libsrv_um.so:system/vendor/lib/libsrv_um.so \
+    $(VENDOR_FOLDER)/proprietary/vendor/lib/libusc.so:system/vendor/lib/libusc.so
 
 # Unset our vars.
 VENDOR_FOLDER :=
-VENDOR_SGX_CORE :=
+
