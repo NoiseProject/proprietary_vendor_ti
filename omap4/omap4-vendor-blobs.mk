@@ -1,4 +1,4 @@
-VENDOR_FOLDER := vendor/ti/proprietary/omap4
+VENDOR_FOLDER := vendor/ti/omap4
 
 PRODUCT_COPY_FILES += \
     $(VENDOR_FOLDER)/proprietary/vendor/firmware/ducati-m3.bin:system/vendor/firmware/ducati-m3.bin \
